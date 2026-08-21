@@ -8,7 +8,7 @@ aplicação completa entregue na Aula 20. O enunciado completo do case está em
 
 ## Identificação
 
-- Nome completo: José Romualdo da Costa
+- Nome completo: Pablo rogerio de oliveira
 - RA: 1234567890
 - Turma: quinta
 - O que espero aprender: publicar minha primeira aplicação web na internet.
