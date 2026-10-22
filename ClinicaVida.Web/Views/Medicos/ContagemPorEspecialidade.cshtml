@@ -1,0 +1,35 @@
+
+@model Dictionary<int, int>
+
+@{
+    ViewData["Title"] = "Contagem por Especialidade";
+    var especialidades = ViewBag.Especialidades as List<ClinicaVida.Web.Models.Especialidade>
+        ?? new List<ClinicaVida.Web.Models.Especialidade>();
+}
+
+<div class="container mt-4">
+    <h1>Quantidade de Médicos por Especialidade</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Especialidade</th>
+                <th>Quantidade de Médicos</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var especialidade in especialidades)
+            {
+                var quantidade = Model.GetValueOrDefault(especialidade.Id, 0);
+
+                <tr>
+                    <td>@especialidade.Nome</td>
+                    <td>@quantidade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-controller="Medicos" asp-action="Index"
+       class="btn btn-secondary">Voltar aos médicos</a>
+</div>
